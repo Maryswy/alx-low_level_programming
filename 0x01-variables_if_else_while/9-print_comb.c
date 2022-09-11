@@ -9,18 +9,17 @@
 
 int main(void)
 {
-	int item;
+	int d;
 
-	for (item = '0'; item <= '9'; item++)
+	for (d = '0'; d <= '9'; d++)
 	{
-		putchar(item);
-		if (item != '9')
+		putchar(d);
+		if (d != '9')
 		{
 			putchar(',');
-			putchar('');
+			putchar(' ');
 		}
+		putchar('\n');
+		return (0);
 	}
-	putchar('\n');
-	return (0);
 }
-
