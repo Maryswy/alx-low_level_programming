@@ -7,18 +7,11 @@
 
 int main(void)
 {
-int n = 48;
-int l = 'a';
-while (n <= 57)
-{
-putchar(n);
-n + 1;
-}
-while (l <= 'f')
-{
-putchar(l);
-l++;
-}
+char item;
+for (item = '0'; item <= '9'; item++)
+putchar(item);
+for (item = 'a'; item <= 'f'; item++)
+putchar(item);
 putchar('\n');
 return (0);
 }
