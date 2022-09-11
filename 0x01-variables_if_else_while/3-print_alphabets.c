@@ -1,18 +1,31 @@
 #include <stdio.h>
- /**
-  * main-main block
-  * Description:prints lowercase,upppercase followed by a new line
-  * Return:Always 0 (success)
-  */
+
+/**
+ * main - prints lowercase then uppercase use putchar only
+ * Return: 0
+ */
 
 int main(void)
-{   char c = 'a';
-	while	(c <= 'z')
+{
+	int lw = 'a';
+	int up = 'A';
 
-	{ if (c != 'e' && c !
-			= 'q')
-		{ putchar(c);
-		} c++;
-	} putchar('\n');
+	while (lw <= 'z')
+	{
+		putchar(lw);
+		lw += 1;
+	}
+	while (up <= 'Z')
+
+	{
+		putchar(up);
+
+
+
+		up += 1;
+
+	}
+	putchar('\n');
 	return (0);
 }
+
