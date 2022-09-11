@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 /**
- * main-main block
- * Description:Assign a random number and print the last digit
- * Return:Always 0 (success)
+ * main-Entry
+ * Return:0 if Successful
  */
 
 int main(void)
 {
-	char c = 'a';
+	char start;
 
-	putchar (c) c++;
-
-	while (c <= 'z')
-		put char ('\n');
+	for (start = 'a'; start <= 'z'; start++)
+	{
+		putchar(start);
+	}
+	putchar('\n');
 	return (0);
 }
