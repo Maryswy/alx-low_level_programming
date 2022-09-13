@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bauer - function that prints every minute of the day
- * Return: 24_hours at the end of the input
+ * jack_bauer - function that prints  24_hours at the end of the input
+ * Return: 24 hour clock
  */
 
 void jack_bauer(void)
