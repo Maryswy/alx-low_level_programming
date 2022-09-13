@@ -2,7 +2,7 @@
 
 /**
  * jack_bauer - function that prints every minute of the day
- * Return: 24 hour clock line by line
+ * Return: 24_hours at the end of the input
  */
 
 void jack_bauer(void)
