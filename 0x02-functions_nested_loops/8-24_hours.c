@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bauer - function prints h, m /10 to rotate for loop breaks before 24:00
- * Return: 24 hour clock
+ * jack_bauer - a function that prints time of the day from  00:00 to 23:59
+ * Return: 0
  */
 
 void jack_bauer(void)
