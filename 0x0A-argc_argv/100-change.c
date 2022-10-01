@@ -1,67 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include "main.h"
 
 /**
- * main - Entry Point
- * @argc: number of arguments
- * @argv: array pointing to arguments
- * Return: 0
+ * main - prints buffer in hexa
+ * @argc: the  number of command line arguments
+ * @argv: An array containing the program command line arguments.
+ * Return: Always 0 (success)
  */
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
+	int j = 0, i = 1, coins, change = 0, a;
+
+	int cents[5] = {25, 10, 5, 2, 1};
+
+	if (argc == 2)
 	{
-		printf("%s\n", "Error");
+
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] == '-')
+			{
+				printf("0\n");
+				return (0);
+			}
+			if (!(isdigit(argv[i][j])))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		coins = atoi(argv[i]);
+
+		for (a = 0; a < 5; a++)
+		{
+			while (coins >= cents[a])
+			{
+				coins -= cents[a];
+				change += 1;
+			}
+		}
+		printf("%d\n", change);
+	}
+	else
+	{
+		printf("Error\n");
 		return (1);
 	}
-	else if (argc < 0)
-	{
-		return (0);
-	}
-	printf("%d\n", change(atoi(argv[1])));
 	return (0);
 }
 
 
-/**
- * change - get change
- * @cents: amount of coins from main function
- * Return: change
- */
-
-int change(int cents)
-{
-	int q = 25, d = 10, n = 5, t = 2, p = 1;
-
-	while (cents > 0)
-	{
-		while (cents >= q)
-		{
-			cents -= q;
-			coins++;
-		}
-		while (cents >= d)
-		{
-			cents -= d;
-			coins++;
-		}
-		while (cents >= n)
-		{
-			cents -= n;
-			coins++;
-		}
-		while (cents >= t)
-		{
-			cents -= t;
-			coins++;
-		}
-		while (cents >= p)
-		{
-			cents -= p;
-			coins++;
-		}
-	}
-	return (coins);
-}
 
